@@ -19,7 +19,7 @@ public class ReverseDigits {
 }
 class Astronomy {
     public static Double sphereSquare(Double r) {
-        double S = 4 * π * r * 2;
+        double S = 4 * π * r * r;
         return S;
     }
 
@@ -48,18 +48,33 @@ class Astronomy {
         return earthVsJupiter1;
     }
 
+    public static void main(String[] args) {
+        System.out.println(earthSquare());
+        System.out.println(mercurySquare());
+        System.out.println(jupiterSquare());
+        System.out.println(earthVsMercury());
+        System.out.println(earthVsJupiter());
+    }
 }
 class AccuracyDoubleFloat {
     public static double volumeBallDouble(double radius) {
-        double volumeBallDouble1 = 4 / 3 * π * radius * 3;
+        double volumeBallDouble1 = 4.0 / 3.0 * π * radius * radius * radius;
         return volumeBallDouble1;
     }
     public static float volumeBallFloat(float radius) {
-        float volumeBallFloat1 = (float) (4 / 3 * π * radius * 3);
+        float volumeBallFloat1 = (float) (4.0 / 3.0 * π * radius * radius * radius);
         return volumeBallFloat1;
     }
     public static double calculateAccuracy(double radius) {
         double calculateAccuracy1 = volumeBallDouble(6371.2) - volumeBallFloat((float) 6371.2);
         return calculateAccuracy1;
     }
+    public static void main(String[] args) {
+        System.out.println(volumeBallDouble(6371.2));
+        System.out.println(volumeBallFloat(6371.2f));
+        System.out.println(calculateAccuracy(6371.2));
+    }
 }
+
+
+
