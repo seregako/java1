@@ -18,7 +18,7 @@ boolean result2 = ((a > c && a > b && a * a == c * c + b * b) || (b > c && b > a
 return result2;
     }
     public static boolean isIsoscelesTriangle(int a, int b, int c) {
-        boolean result3 = ((a == b && a != c) || (a == c && a != b) || (b == c && b != a));
+        boolean result3 = a == b || a == c || b == c;
         return result3;
 
     }
