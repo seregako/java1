@@ -51,17 +51,20 @@ public class CyclesGoldenFibo {
         for (int y = 1; y <= n; y++) {
             x1 = x + x1;
             x = x1 - x;
-            System.out.print(x + " ");
+            System.out.println(x + " ");
             u = (double) x1 / x;
-            if (x1 <= 100 && u >= 1.61703 && u <= 1.61903) {
-                System.out.print("стороны золотого треугольника" + x + " ");
-                System.out.println(x1);
+                if (x1 <= 100 && u >= 1.61703 && u <= 1.61903) {
+                    System.out.print("стороны золотого треугольника " + x + "  и ");
+                    System.out.println(x1);
+                }
             }
         }
-        }
+    }
 
 
-        }
+
+
+
 
 
 //        Далее в функции public static void main(String[] args) вывести на консоль, используя цикл,
